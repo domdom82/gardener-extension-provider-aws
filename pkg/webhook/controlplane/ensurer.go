@@ -548,8 +548,8 @@ do
 		continue
 	fi
 
-	echo changing mtu of non-virtual interface: ${interface}
-	ip link set dev ${interface} mtu 1460
+	echo "changing mtu (1500) of non-virtual interface: ${interface}"
+	ip link set dev ${interface} mtu 1500
 done
 `
 	)

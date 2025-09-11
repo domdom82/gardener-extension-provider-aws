@@ -415,8 +415,8 @@ do
 		continue
 	fi
 
-	echo changing mtu of non-virtual interface: ${interface}
-	ip link set dev ${interface} mtu 1460
+	echo "changing mtu (1500) of non-virtual interface: ${interface}"
+	ip link set dev ${interface} mtu 1500
 done
 `
 			ecrConfig = `{"kind":"CredentialProviderConfig","apiVersion":"kubelet.config.k8s.io/v1","providers":[{"name":"ecr-credential-provider","matchImages":["*.dkr.ecr.*.amazonaws.com","*.dkr.ecr.*.amazonaws.com.cn","*.dkr.ecr-fips.*.amazonaws.com","*.dkr.ecr.us-iso-east-1.c2s.ic.gov","*.dkr.ecr.us-isob-east-1.sc2s.sgov.gov"],"defaultCacheDuration":"1h0m0s","apiVersion":"credentialprovider.kubelet.k8s.io/v1"}]}`
